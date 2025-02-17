@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build: .
+    ports:
+      - "5010:5010"
+      - "5151:5151"
+    volumes:
+      - "E:/VideosFolder/check_case:/app/video_case"  # Mount host directory into the container
+      - "E:/VideosFolder/fa_case:/app/video_case1"
+      - "E:/VideosFolder/My_Videos:/app/video_case2"
+      - "E:/VideosFolder/video_case:/app/video_case3"  # Avoid duplicate mount paths
+      - ./templates:/app/templates
+      - ./static:/app/static
+
+    environment:
+      - PYTHONPATH=/app
+    command: uvicorn proj:app --host 0.0.0.0 --port 5010 --reload
