@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1 {
+    color: #333;
+    font-size: 32px; /* Larger font size for the header */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+strong {
+    font-weight: bold; /* Bold the dataset names */
+    font-size: 20px;
+}
+
+.launch-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Adjusted padding for the button */
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px; /* Larger font size for buttons */
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Space between name and button */
+}
+
+.launch-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+input[type="text"] {
+    padding: 12px;
+    margin: 10px 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px; /* Bigger font size for text input */
+}
+
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+a button {
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
