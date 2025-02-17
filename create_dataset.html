@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Dataset</title>
+</head>
+<body>
+    <h1>Create a New Dataset</h1>
+    
+    <form action="/create_dataset" method="post">
+        <label for="dataset_name">Dataset Name:</label>
+        <input type="text" id="dataset_name" name="dataset_name" required><br><br>
+
+        <label for="dataset_dir">Dataset Directory:</label>
+        <input type="text" id="dataset_dir" name="dataset_dir" required><br><br>
+
+        <button type="submit">Create Dataset</button>
+    </form>
+
+    <br>
+    <a href="/">Go back to Home</a>
+</body>
+</html>
+

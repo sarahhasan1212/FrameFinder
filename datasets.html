@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Datasets</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Assuming you have a CSS file -->
+</head>
+<body>
+    <h1>Available Datasets</h1>
+    <ul>
+        {% for dataset in datasets %}
+        <li>
+            <strong>{{ dataset }}</strong> <!-- Make dataset names bold -->
+            <!-- Button to launch FiftyOne app for the selected dataset -->
+            <form action="/api/launch_fiftyone/{{ dataset }}" method="get">
+                <button type="submit" class="launch-button">Launch FiftyOne</button>
+            </form>
+        </li>
+        {% else %}
+        <li>No datasets available.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/create_dataset">Create a new dataset</a>
+</body>
+</html>
